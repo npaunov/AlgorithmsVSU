@@ -1,3 +1,4 @@
+#include "Task1.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -17,7 +18,7 @@ struct List {
     Element* tail;
 };
 
-int main() {
+void Task1() {
 
     // Prompt the user to enter N in the range [10..100]
     int N;
@@ -27,7 +28,6 @@ int main() {
     // Validate input
     if (N < 10 || N > 100) {
         cout << "Invalid input. N must be between 10 and 100." << endl;
-        return 1;
     }
 
     // Seed the random number generator
@@ -91,6 +91,4 @@ int main() {
         delete current;
         current = next;
     }
-
-    return 0;
 }
